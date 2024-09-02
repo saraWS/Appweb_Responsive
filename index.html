@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Web Responsive</title>
     <link rel="stylesheet" href="css/estilos.css" />
+
 </head>
 <body>
     <header class="header">
@@ -13,29 +14,49 @@
     <main class="main">
         <section class="section">
             <nav class="nav">
+
                 <div class="nav__item">
                     <h2 class="nav__title">TYPESCRIPT</h2>
                     <p class="nav__description">Es un lenguaje de programación desarrollado por Microsoft. Es un superconjunto tipado de JavaScript.</p>
-                    <select class="nav__select">
+                    <select class="nav__select" id="typescript-select">
                         <option value="#">Conocer más</option>
+                        <option value="definicion">Definición</option>
+                        <option value="sintaxis">Sintaxis</option>
+                        <option value="variables">Variables → Tipos de variables, asignación</option>
+                        <option value="clases_metodos_interfaces">Clases, Métodos, Interfaces y Tipos</option>
+                        <option value="ciclos_metodos">Ciclos, Condicionales, Métodos</option>
+                        <option value="arrays_funciones">Arrays, Funciones</option>   
                     </select>
+                    <div class="info" id="typescript-info"></div>
                 </div>
+
                 <div class="nav__item">
                     <h2 class="nav__title">ANGULAR</h2>
                     <p class="nav__description">Es un framework de desarrollo web de código abierto creado por Google, se utiliza principalmente para crear aplicaciones web de una sola página (aplicaciones que cargan una única página HTML y actualizan dinámicamente el contenido a medida que el usuario interactúa con la app).</p>
-                    <select class="nav__select">
+                    <select class="nav__select" id="angular-select" >
                         <option value="#">Conocer más</option>
+                         <option value="definicion">Definición</option>
+                         <option value="caracteristicas">Caracteristicas</option>
+                         <option value="configuracion">Configuracion</option>
+                         <option value="signal">Signal...</option>
                     </select>
+                    <div class="info" id="angular-info"></div>
                 </div>
+
                 <div class="nav__item">
                     <h2 class="nav__title">IONIC</h2>
                     <p class="nav__description">Es un framework de desarrollo de aplicaciones móviles y web, permite a los desarrolladores crear aplicaciones híbridas.</p>
-                    <select class="nav__select">
+                    <select class="nav__select" id="ionic-select">
                         <option value="#">Conocer más</option>
+                        <option value="definicion">Definición</option>
+                        <option value="caracteristicas">Caracteristicas</option>
+                        <option value="configuracion">Configuracion</option>
                     </select>
+                    <div class="info" id="ionic-info"></div>
                 </div>
             </nav>
         </section>
     </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
