@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             info: document.getElementById('typescript-info'),
             content: {
                 definicion: "TypeScript es un lenguaje de programación desarrollado y mantenido por Microsoft. TypeScript es un superset de JavaScript que añade tipos estáticos. Permite detectar errores durante el desarrollo y mejorar la mantenibilidad del código.",
-                sintaxis: "La sintaxis de TypeScript es muy similar a la de JavaScript, pero con anotaciones de tipo(son una forma de especificar el tipo de datos que una variable, función o propiedad puede tener.)<br><br>Ejemplo: let nombre: string = 'Juan';",
+                sintaxis: "La sintaxis de TypeScript es muy similar a la de JavaScript, pero con anotaciones de tipo (son una forma de especificar el tipo de datos que una variable, función o propiedad puede tener.)<br><br>Ejemplo: let nombre: string = 'Juan';",
                 variables: "En TypeScript, las variables pueden ser de diferentes tipos:<br><br>let num: number = 5; // Tipo número<br>let name: string = 'John'; // Tipo cadena<br>let isActive: boolean = true; // Tipo booleano",
                 clases_metodos_interfaces: 
                 "TypeScript soporta la definición de clases, métodos, interfaces y tipos para mejorar la estructura del código.<br><br>" +
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Ejemplo de array tipado:<br>let lista: number[] = [1, 2, 3];<br><br>"+
                 "Las funciones son bloques de código reutilizables que realizan una tarea específica. En TypeScript, puedes tipar los parámetros y el valor de retorno de una función para mayor seguridad.<br><br>"+
                 "Ejemplo de función simple:<br>function sumar(a: number, b: number): number {<br>  return a + b;<br>}"
-                }            
+            }
         },
         angular: {
             element: document.getElementById('angular-select'),
@@ -82,7 +82,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Luego usa:<br>"+ 
                 "ionic capacitor run android<br>"+ 
                 "ionic capacitor run ios<br>"+ 
-                "Dependiendo del dispositivo o emulador en el que quieras probar."
+                "Dependiendo del dispositivo o emulador en el que quieras probar.",
+                capacitor: "Capacitor es una herramienta moderna para construir aplicaciones web que se pueden desplegar nativamente en iOS, Android y la web. Funciona como una capa entre la aplicación web y las capacidades nativas del dispositivo, permitiendo el acceso a funcionalidades como la cámara, GPS, notificaciones push, entre otras."
             }
         }
     };
@@ -90,12 +91,14 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateInfo(selectElement, infoElement, content) {
         selectElement.addEventListener('change', function() {
             const selectedValue = this.value;
-            // Utiliza innerHTML en lugar de textContent para permitir HTML
-            //en este caso es para que pueda hacer saltos de linea o poner imagenes aqui en el js
             infoElement.innerHTML = content[selectedValue] || '';
-        });
-    }    
 
+            // Añadir la clase CSS para aplicar los estilos
+            infoElement.classList.add('info-box');
+        });
+    }
+
+    // Iterar sobre los selectores y configurar los event listeners
     Object.values(selects).forEach(({ element, info, content }) => {
         updateInfo(element, info, content);
     });
